@@ -1,32 +1,32 @@
 package com.jetbrains;
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int a;
-        int b;
-        int c;
-        int d;
-
-        System.out.println("Welcome to Multiplication Tables");
-        System.out.println("Enter a number between 1 and 20");
-        Scanner keyboard = new Scanner(System.in);
-
-        a = keyboard.nextInt();
-        b = 20 - a;
 
 
-        for (c = a; c <=b; c++) {
-            System.out.println("multiplication is" + c);
+        int[][] temps =   { {68, 70, 76, 70, 68, 71, 75},{76,76,87,84,82,75,83},{73,72,81,78,76,73,77},
+            {64,65,69,68,70,74,72} };
 
 
-            for (d = 0; d <= a; d++) {
-                System.out.println(c + "*" + d + " = " + (c * d));
+
+
+        for (int i = 0; i < 4; i++) {
+
+            for (int j = 0; j < 7; j++) {
+
+                System.out.print(temps[i] [j] + "  ");
+
+
             }
+            System.out.println();
+
         }
+            System.out.println();
+        }
+
     }
-}
+
 
 
 
