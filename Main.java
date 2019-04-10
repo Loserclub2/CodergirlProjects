@@ -1,66 +1,52 @@
 package com.jetbrains;
+
 import static java.lang.System.out;
-
-import  java.util.Scanner;
-
-
 public class Main {
 
 
+        public static int add(int a, int b)
+        {
+// This works!
+            return a + b;
+        }
+        public static int subtract(int a, int b)
+        {
+// FIX the line below!
+            return a - b;
+        }
+        public static int multiply(int a, int b)
+        {
+// FIX the line below!
+            return  a * b;
+        }
+        public static int divide(int a, int b)
+        {
+            return a / b;
+        }
+
     public static void main(String[] args) {
 
-        Scanner keyboard = new Scanner(System.in);
-
-
-        String groceryItems;
-        out.println("List three grocery items");
-        String groceryItem1;
-        out.print("List Item1:");
-        groceryItem1 = keyboard.nextLine();
-
-        String groceryItem2;
-        out.print("List Item2:");
-        groceryItem2 = keyboard.nextLine();
-
-        String groceryItem3;
-        out.print("List Item3:");
-        groceryItem3 = keyboard.nextLine();
-
-
-        int groceryCount = 0;
-        out.print("Enter the quanity " + groceryItem1 +  "");
-        groceryCount += keyboard.nextInt();
-
-
-
-        out.print("Enter the quanity " + groceryItem2 +  "");
-        groceryCount += keyboard.nextInt();
-
-
-        out.print("Enter the quanity " + groceryItem3 +  "");
-        groceryCount += keyboard.nextInt();
-
-
-
-
-        float groceryCost = (float) 0.0;
-        out.print("Enter the price of " + groceryItem1 +  "");
-        groceryCost += keyboard.nextFloat();
-
-        out.print("Enter the price of " + groceryItem2 +  "");
-        groceryCost += keyboard.nextFloat();
-
-
-        out.print("Enter the price of" + groceryItem3 +  "");
-        groceryCost = +keyboard.nextFloat();
-
-
-        int totalAverage = (int) (groceryCount * groceryCost);
-        //float totalAverage = groceryCount * groceryCost;
-        out.print("Calculating your grocery bill.");
-        out.print("Your total is " + totalAverage);
-
-
-
+        // First we call the add function.
+// It takes two input parameters which are 5 and 7 here.
+// The return value of add(), which is 12,
+// gets saved in the variable x.
+        int x = add(5, 7);
+// Then we print out the value of x in our print statement.
+        System.out.println("5 plus 7 equals " + x);
+// Now we do the same kind of call, but in a single line,
+// without needing 'x' as a temporary variable in between.
+        System.out.println("3 plus 5 equals " + add(3, 5));
+        System.out.println("1 plus 2 equals " + add(1, 2));
+// The subtraction results are wrong
+// because the subtract() method is incomplete. Fix it!
+        System.out.println("9 minus 4 equals " + subtract(9, 4));
+        System.out.println("9 minus 3 equals " + subtract(9, 3));
+// The multiplication results are wrong
+// because the multiply() method is incomplete. Fix it!
+        System.out.println("3 times 3 equals " + multiply(3, 3));
+        System.out.println("2 times 4 equals " + multiply(2, 4));
+// Now it's your turn! Create a divide() method and write some
+// print statements to test that it works right.
+        out.println("10 divided by 2 equals " +  divide(10, 2));
     }
 }
